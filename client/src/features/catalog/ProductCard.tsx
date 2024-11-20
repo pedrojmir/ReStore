@@ -1,12 +1,10 @@
-﻿import { Card, CardMedia, CardContent, Typography, CardActions, Button, CardHeader, Avatar } from "@mui/material";
-import { Product } from "../../app/models/product";
+﻿import { LoadingButton } from "@mui/lab";
+import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import agent from "../../app/api/agent";
-import { LoadingButton } from "@mui/lab";
-import { currencyFormat } from "../../app/util/util";
+import { Product } from "../../app/models/product";
 import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
-import { addBasketItemAsync, setBasket } from "../basket/basketSlice";
+import { currencyFormat } from "../../app/util/util";
+import { addBasketItemAsync } from "../basket/basketSlice";
 
 interface Props {
     product: Product;
